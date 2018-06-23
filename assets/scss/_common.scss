@@ -3,6 +3,14 @@
  * Common
  *
    ========================================================================== */
+  body {
+    font-size: $body-font-size;
+    color: $gray;
+  }
+
+  p {
+    font-size: $p-font-size;
+  }
 
    .container {
      max-width: 1120px;
