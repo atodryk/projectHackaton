@@ -1,31 +1,30 @@
 @import '_variables';
 
 .h{
-    padding-top: $space;
-    padding-left: .7*$space;
-    padding-right:  $space;
-    //padding-bottom: .5*$space;
+    margin: 0;
+    padding: $space $space;
     font-style: Poppins, SemiBold;  
     text-align: center;
     color: $black;
 }
+.boxes-cont {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .box{
-   width: 30%;
-  
-
-    display: inline-block;
+    width: auto;
     overflow: hidden;
-    float: left;
-    width: 33%;
+    margin: 0.5*$space;
 }
 
-.img{
-   //width: 100%;
-    display: inline-block;
-    text-align: center;
-   
-
+.img {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
 }
+
 .box-header{
     text-align: center;
    // padding-top: .5*$space;
@@ -36,12 +35,11 @@
 
 .box-text{
     text-align: center;
-    padding-right: 2*$space;
     padding-bottom: $space;
 }
 
 .sign{
-    display: inline-block;
+    display: flex;
     position: relative;
     &:before {
         content: "";
@@ -52,7 +50,11 @@
         height: 1px;
         background: $gray;
     }
+    .date {
+        padding-left: $padding-space;
+    }
 }
+
 .linia{
     width: 100%;
 }
