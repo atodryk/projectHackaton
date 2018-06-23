@@ -11,19 +11,22 @@
   p {
     font-size: $p-font-size;
   }
+
   .section {
     margin-top: 2*$space;
     width: 100%;
   }
+
    .container {
      max-width: 1120px;
    }
-  
-   .btn {
-     width: 160px;
-     height: 48px;
-     color: $purple;
-     border: 1px solid $purple;
+
+  .btn {
+    width: 160px;
+    height: 48px;
+    color: $purple;
+    border: 1px solid $purple;
+    background: transparent;
     &__purple {
       color: $white;
       border: 1px solid $blue-dark;
@@ -33,8 +36,19 @@
       color: $white;
       border: 1px solid $white;
     }
-   }
+  }
 
    ::-webkit-input-placeholder {
     color: rgba($white, 0.4);
+}
+
+.feather__icon {
+  &__wrap {
+    width: 32px;
+    height: 32px;
+  }
+  fill: $white;
+  stroke: $white;
+  width: 32px;
+  height: 32px;
 }

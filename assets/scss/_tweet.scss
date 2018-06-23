@@ -1,8 +1,10 @@
 .tweet {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     &__img {
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -33,5 +35,17 @@
         font-size: 16px;
         font-weight: 600;
         font-family: Poppins, SemiBold;
-}
+    }
+    .feather__tweet {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__button-wrap {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        margin: $space;
+    }
 }
