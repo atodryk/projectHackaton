@@ -1,0 +1,16 @@
+.partners {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.partners-box {
+    display: flex;
+}
+.who-work {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    grid-area: top;
+}
