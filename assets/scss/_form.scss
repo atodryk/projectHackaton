@@ -1,18 +1,20 @@
 .form{
+    max-width: 50%;
+    margin: 0 auto;
     &__group:not(:last-child){
         margin-bottom: 2rem;
     }
 
     &__input{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-family: inherit;
         color: inherit;
         padding: 1.5rem 2rem;
         border-radius: 2px;
         background-color: rgba($white, .5);
         border: none;
-        border-bottom: 3px solid $gray-light;
-        width: 100%;
+        border-bottom: 2px solid $gray-light;
+        width: 88%;
         display: block;
         transition: all .3s;
 
@@ -30,7 +32,7 @@
     }
 
     &__label {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 700;
         margin-left: 2rem;
         margin-top: .7rem;
@@ -44,4 +46,27 @@
         visibility: hidden;
         transform: translateY(-4rem);
     }
+}
+.heading-contact {
+    font-size: $h2-font-size;
+    color: $blue-dark;
+    text-align: center;
+    margin: 0 auto;
+}
+.paragraph-center {
+    text-align: center;
+    font-size: $body-font-size;
+    padding-bottom: $space;
+    
+}
+.message-box {
+    width: 88%;
+    border: 1px solid $gray-light;
+    resize: none;
+    padding: 32px;
+    background-color: $white-dark;
+}
+.verify {
+    padding-top: $space;
+    font-size: $body-font-size;
 }
