@@ -1,0 +1,10 @@
+.visual {
+    display: flex;
+    justify-content: center;
+    &__map {
+        height: 560px;
+        width: 1120px;
+        background: url(http://via.placeholder.com/1120x560) no-repeat;
+        background-size: cover;
+    }
+}
