@@ -7,3 +7,19 @@
    .container {
      max-width: 1120px;
    }
+
+   .btn {
+     width: 160px;
+     height: 48px;
+     color: $purple;
+     border: 1px solid $purple;
+    &__purple {
+      color: $white;
+      border: 1px solid $blue-dark;
+      background-color: $purple;
+    }
+    &__white {
+      color: $white;
+      border: 1px solid $white;
+    }
+   }
