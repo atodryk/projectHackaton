@@ -1,0 +1,58 @@
+@import '_variables';
+
+.h{
+    padding-top: $space;
+    padding-left: .7*$space;
+    padding-right:  $space;
+    //padding-bottom: .5*$space;
+    font-style: Poppins, SemiBold;  
+    text-align: center;
+    color: $black;
+}
+.box{
+   width: 30%;
+  
+
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    width: 33%;
+}
+
+.img{
+   //width: 100%;
+    display: inline-block;
+    text-align: center;
+   
+
+}
+.box-header{
+    text-align: center;
+   // padding-top: .5*$space;
+    //padding-right: 2* $space;
+    //padding-left: 2.5* $space;
+    padding-bottom: $space;
+}
+
+.box-text{
+    text-align: center;
+    padding-right: 2*$space;
+    padding-bottom: $space;
+}
+
+.sign{
+    display: inline-block;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: - $padding-space;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $gray;
+    }
+}
+.linia{
+    width: 100%;
+}
