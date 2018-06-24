@@ -29,6 +29,10 @@ gulp.task('media', function() {
   .pipe(gulp.dest('./web/media/'))
 })
 
+gulp.task('fonts', function() {
+  gulp.src('./assets/fonts/**/*')
+  .pipe(gulp.dest('./web/fonts/'))
+})
 
 gulp.task('nunjucks', function() {
   return gulp.src(['assets/templates/*.html'])
@@ -38,7 +42,7 @@ gulp.task('nunjucks', function() {
     .pipe(gulp.dest('./web'))
 });
 
-gulp.task('build', ['img','media', 'sass', 'nunjucks', 'js'], function() {
+gulp.task('build', ['img','media', 'sass', 'nunjucks', 'js', 'fonts'], function() {
     browserSync.init({
         server: "./web"
     });

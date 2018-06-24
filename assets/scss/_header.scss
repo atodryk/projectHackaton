@@ -56,27 +56,42 @@
         font-family: Permanent Marker, "sans-serif";
         font-size: 38px;
         color: $white;
+        &:hover {
+            text-shadow: 2px 2px 2px $blue;
+            p {
+                color: $blue;
+                text-shadow: none;
+            }
+        }
+        p {
+            font-size: 0.75rem;
+        }
     }
     &__nav {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         &-link {
             font-size: $menu-font-size;
             font-family: Poppins, "sans-serif";
             text-decoration: none;
             color: $white;
-            padding: $padding-space 2*$padding-space;
+            padding: $padding-space 0.5*$padding-space;
             &--special {
                 border: 1px solid $white;
                 border-radius: 4px;
-                padding: $padding-space 3*$padding-space;
-                margin-left: 120px;
+                padding: $padding-space $padding-space;
+                margin-left: $space;
+                @include lg {
+                    margin-left: 3*$space;
+                }
             }
         }
     }
     &__nav-list {
         display: flex;
-        justify-content: space-between;
         list-style: none;
+        padding: 0;
+        -webkit-padding-start: 0;
     }
 }

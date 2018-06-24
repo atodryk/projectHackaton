@@ -1,50 +1,37 @@
 .form{
-    max-width: 50%;
-    margin: 0 auto;
-    &__group:not(:last-child){
-        margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__wrap {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     &__input{
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-family: inherit;
         color: inherit;
-        padding: 1.5rem 2rem;
-        border-radius: 2px;
+        padding: $padding-space;
         background-color: rgba($white, .5);
         border: none;
-        border-bottom: 2px solid $gray-light;
+        border-bottom: 1px solid $gray-light;
         width: 88%;
-        display: block;
-        transition: all .3s;
-
-        &:focus{
-            outline: none;
-            box-shadow: 0 1rem 2rem rgba($black, .1);
-            border-bottom: 3px solid $gray-dark;
-        }
-        &:focus:invalid{
-            border-bottom: 3px solid $purple;
-        }
         &::-webkit-input-placeholder{
-            color: $gray-light;
+            color: $gray;
         }
     }
 
     &__label {
-        font-size: 1rem;
+        margin-top: $padding-space;
+        font-size: 0.75rem;
         font-weight: 700;
-        margin-left: 2rem;
-        margin-top: .7rem;
+        color: $gray-light;
         display: block;
-        transform: translateY(-7rem);
-        transition: all .3s;
-    }
-
-    &__input:placeholder-shown + &__label{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-4rem);
+        &:last-of-type {
+            margin-bottom: $padding-space;
+        }
     }
 }
 .heading-contact {
@@ -60,13 +47,33 @@
     
 }
 .message-box {
-    width: 88%;
+    display: block;
+    width: calc(100% - 2 * #{$space});
     border: 1px solid $gray-light;
     resize: none;
-    padding: 32px;
+    padding: $space;
     background-color: $white-dark;
+    &::-webkit-input-placeholder{
+        color: $gray;
+    }
 }
 .verify {
-    padding-top: $space;
+    padding-top: 2*$padding-space;
     font-size: $body-font-size;
+    color: $gray-light;
+}
+.btn__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2*$space 0 $space 0;
+}
+
+.form__subtext {
+    text-align: center;
+    color: $gray-light;
+    &-link {
+        color: $purple;
+        text-decoration: none;
+    }
 }

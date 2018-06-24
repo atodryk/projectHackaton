@@ -14,22 +14,19 @@
 }
 
 .box{
-    width: auto;
+    width: calc(100% - 6 * #{$padding-space});
     overflow: hidden;
-    margin: 0.5*$space;
+    margin: $padding-space;
 }
 
 .img {
     overflow: hidden;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
 .box-header{
     text-align: center;
-   // padding-top: .5*$space;
-    //padding-right: 2* $space;
-    //padding-left: 2.5* $space;
     padding-bottom: $space;
 }
 
@@ -40,7 +37,10 @@
 
 .sign{
     display: flex;
+    justify-content: space-between;
+    color: $gray-light;
     position: relative;
+    font-size: 0.75rem;
     &:before {
         content: "";
         position: absolute;

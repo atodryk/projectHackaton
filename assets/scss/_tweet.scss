@@ -11,23 +11,25 @@
         height: 255px;
         width: 100%;
         margin-top: 2*$space;
-        padding: $space 2*$space;
         background:url(http://via.placeholder.com/1366x255);
         background-size: cover;
     }
     &__wrap {
         width: 100%;
+        position: absolute;
+        top: 2*$space;
     }
     &__title {
-        padding-top: 89px;
+        padding-left: 2*$space;
         text-align: left;
         max-width: 30%;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 400;
         font-family: Roboto Slab, Light;
 
     }
     &__text {
+        padding-left: 2*$space;
         padding-top: $padding-space;
         padding-bottom: 2*$padding-space;
         text-align: left;
@@ -38,8 +40,9 @@
     }
     .feather__tweet {
         position: absolute;
+        margin-top: -5px;
         left: 0;
-        top: 0;
+        top: $space;
     }
     &__button-wrap {
         display: flex;

@@ -8,10 +8,6 @@
     color: $gray;
   }
 
-  p {
-    font-size: $p-font-size;
-  }
-
   .section {
     margin-top: 2*$space;
     width: 100%;
@@ -27,14 +23,17 @@
     color: $purple;
     border: 1px solid $purple;
     background: transparent;
+    border-radius: 4px;
     &__purple {
       color: $white;
       border: 1px solid $blue-dark;
       background-color: $purple;
+      border-radius: 4px;
     }
     &__white {
       color: $white;
       border: 1px solid $white;
+      border-radius: 4px;
     }
   }
 
