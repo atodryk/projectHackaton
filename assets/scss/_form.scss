@@ -77,3 +77,8 @@
         text-decoration: none;
     }
 }
+label, .error {
+    width: 100%;
+    bottom: 0.75rem;
+    color: red;
+}

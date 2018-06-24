@@ -11,6 +11,7 @@
         ph.slickSlider();
         ph.partners();
         ph.news();
+        ph.formValidate();
         ph.form();
       },
 
@@ -61,11 +62,8 @@
             for (var y = 0; y < paLength; y++) {
                 var partner = $('.partners__img')[y];
                 var partnerId = partner.getAttribute('id');
-                console.log(partnerId);
                 var paSrc = paLogo[y].src.x1;
-                console.log(paSrc);
                 var paAlt = paLogo[y].alt;
-                console.log(paAlt);
                 $('#' + partnerId).attr('src', paSrc);
                 $('#' + partnerId).attr('alt', paAlt);
             }
@@ -80,12 +78,11 @@
             var newsTitle = data[z].title;
             var newsImg = data[z].image.x1;
             var newsAuthor = data[z].author;
-            var newsDate = data[z].date_timestamp
+            var newsDate = data[z].date_timestamp;
             var time = new Date(newsDate *1000);
-            var newsText = data[z].description
+            var newsText = data[z].description;
             if (newsText.length > 200) {
-                newsText = newsText.substring(0,50) + "...";
-                console.log(newsText);
+                newsText = newsText.substring(0,200) + "...";
             }
             var thisBox = $('.box')[z];
             var thisBoxId = thisBox.getAttribute('id');
@@ -98,13 +95,18 @@
         });
     },
 
-    form: function(){
-        $('.form').on('submit', function(e){
+    formValidate: function() {
+        $('.form__wrap').validate();
+    },
+
+    form: function() {
+        $('.form__wrap').on('submit', function(e){
             e.preventDefault();
             $.get("http://kitan.pl/pb/data/api.php", $('.form').serialize());
         });
     }
 }
+
   
     $(function() {
      ph.init();
